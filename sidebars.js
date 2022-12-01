@@ -18,11 +18,6 @@ module.exports = {
       id: "home/index",
     },
     {
-      type: "doc",
-      label: "Redpanda Platform",
-      id: "home/platform/index",
-    },
-    {
       type: "category",
       label: "Introduction",
       link: { type: "doc", id: "platform/introduction/index" },
@@ -114,6 +109,47 @@ module.exports = {
       link: { type: "doc", id: "platform/deployment/index" },
       collapsed: true,
       items: [
+        {
+          type: "category",
+          label: "Redpanda Cloud",
+          collapsible: true,
+          link: { type: "doc", id: "platform/deployment/cloud/index/index" },
+          collapsed: true,
+          items: [
+          {
+            type: "doc",
+            label: "Dedicated Cloud vs. BYOC",
+            id: "platform/deployment/cloud/dedicated-byoc",
+          },
+          {
+            type: "doc",
+            label: "Creating a Dedicated Cloud Cluster on AWS",
+            id: "platform/deployment/cloud/create-dedicated-cloud-cluster-aws",
+          },
+          {
+            type: "doc",
+            label: "Creating a BYOC Cluster on AWS",
+            id: "platform/deployment/cloud/create-byoc-cluster-aws",
+          },
+          {
+            type: "doc",
+            label: "VPC Peering",
+            id: "platform/deployment/cloud/vpc-peering",
+          },
+          {
+            type: "doc",
+            label: "Creating a Topic",
+            id: "platform/deployment/cloud/create-topic",
+          },
+          {
+            type: "category",
+            label: "Managed Connectors",
+            link: { type: "doc", id: "platform/deployment/cloud/managed-connectors/index" },
+            items: ["platform/deployment/cloud/managed-connectors/create-s3-sink-connector"],
+          },]
+        }
+        ,
+
         "platform/deployment/production-deployment-automation",
         {
           type: "category",
@@ -718,66 +754,6 @@ module.exports = {
       collapsible: true,
       collapsed: true,
       items: ["platform/labs/install-preview", "platform/labs/data-transform"],
-    },
-  ],
-  cloudSidebar: [
-    {
-      type: "doc",
-      label: "Docs home",
-      id: "home/index",
-    },
-    {
-      type: "doc",
-      label: "Redpanda Cloud",
-      id: "home/cloud/index",
-    },
-    {
-      type: "doc",
-      label: "Dedicated Cloud vs. BYOC",
-      id: "cloud/dedicated-byoc",
-    },
-    {
-      type: "doc",
-      label: "Creating a Dedicated Cloud Cluster on AWS",
-      id: "cloud/create-dedicated-cloud-cluster-aws",
-    },
-    {
-      type: "doc",
-      label: "Creating a BYOC Cluster on AWS",
-      id: "cloud/create-byoc-cluster-aws",
-    },
-    {
-      type: "doc",
-      label: "VPC Peering",
-      id: "cloud/vpc-peering",
-    },
-    {
-      type: "doc",
-      label: "Creating a Topic",
-      id: "cloud/create-topic",
-    },
-    {
-      type: "category",
-      label: "Managed Connectors",
-      link: { type: "doc", id: "cloud/managed-connectors/index" },
-      items: ["cloud/managed-connectors/create-s3-sink-connector"],
-    },
-  ],
-  homeSidebar: [
-    {
-      type: "doc",
-      label: "Docs home",
-      id: "home/index",
-    },
-    {
-      type: "doc",
-      label: "Redpanda Platform",
-      id: "home/platform/index",
-    },
-    {
-      type: "doc",
-      label: "Redpanda Cloud",
-      id: "home/cloud/index",
     },
   ],
 };
