@@ -317,3 +317,11 @@
 /docs/security/index /docs/platform/security/index 301!
 /docs/security/kubernetes-tls /docs/platform/security/kubernetes-tls 301!
 /docs/security/sasl-kubernetes /docs/platform/security/sasl-kubernetes 301!
+
+/docs/cloud/create-byoc-cluster-aws /docs/platform/deployment/cloud/create-byoc-cluster-aws 301!
+/docs/cloud/create-dedicated-cloud-cluster-aws /docs/platform/deployment/cloud/create-dedicated-cloud-cluster-aws 301!
+/docs/cloud/create-topic /docs/platform/deployment/cloud/create-topic 301!
+/docs/cloud/dedicated-byoc /docs/platform/deployment/cloud/dedicated-byoc 301!
+/docs/cloud/vpc-peering /docs/platform/deployment/cloud/vpc-peering 301!
+/docs/cloud/create-s3-sink-connector /docs/platform/deployment/cloud/managed-connectors/create-s3-sink-connector 301!
+/docs/cloud/managed-connectors /docs/platform/deployment/cloud/managed-connectors 301!
