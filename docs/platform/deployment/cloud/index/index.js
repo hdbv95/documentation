@@ -70,7 +70,7 @@ const FeatureList = [
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <Grid gap="2rem" minWidth="250px">
+      <Grid gap="2rem" minWidth="300px">
         {FeatureList.map((props, idx) => (
           <Feature key={idx} {...props} />
         ))}

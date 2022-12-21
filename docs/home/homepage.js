@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './homepage.module.css';
 import Feature from '../../src/components/Feature';
 import Grid from '../../src/components/Grid';
+import FooterMenu from '../../../src/components/FooterMenu';
 
 const FeatureList = [
   {
@@ -66,14 +67,66 @@ const FeatureList = [
   },
 ];
 
+const FooterMenuList = [
+  {
+    title: 'Get Started',
+    items: [
+      { text: 'Get started with Redpanda', url: "" },
+      { text: 'Deploying with RedPanda', url: "" },
+      { text: 'Redpanda Console', url: "" },
+      { text: 'rpk Command Reference', url: "" },
+      { text: 'Tiered Storage', url: "" },
+      { text: 'Sizign Guidelines', url: "" },
+    ],
+  },
+  {
+    title: 'Develop',
+    items: [
+      { text: 'Get started with Redpanda', url: "" },
+      { text: 'Deploying with RedPanda', url: "" },
+      { text: 'Redpanda Console', url: "" },
+      { text: 'rpk Command Reference', url: "" },
+      { text: 'Tiered Storage', url: "" },
+      { text: 'Sizign Guidelines', url: "" },
+    ],
+  },
+  {
+    title: 'Deploy',
+    items: [
+      { text: 'Get started with Redpanda', url: "" },
+      { text: 'Deploying with RedPanda', url: "" },
+      { text: 'Redpanda Console', url: "" },
+      { text: 'rpk Command Reference', url: "" },
+      { text: 'Tiered Storage', url: "" },
+      { text: 'Sizign Guidelines', url: "" },
+    ],
+  },
+  {
+    title: 'Manage',
+    items: [
+      { text: 'Get started with Redpanda', url: "" },
+      { text: 'Deploying with RedPanda', url: "" },
+      { text: 'Redpanda Console', url: "" },
+      { text: 'rpk Command Reference', url: "" },
+      { text: 'Tiered Storage', url: "" },
+      { text: 'Sizign Guidelines', url: "" },
+    ],
+  },
+];
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <Grid gap="2rem" minWidth="250px">
+      <Grid gap="2rem" minWidth="300px">
         {FeatureList.map((props, idx) => (
           <Feature key={idx} {...props} />
         ))}
       </Grid>
-    </section>
+      <Grid gap="3.85rem" minWidth="175px">
+        {FooterMenuList.map((props, idx) => (
+          <FooterMenu key={idx} {...props} />
+        ))}
+      </Grid>
+    </section >
   );
 }
