@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './homepage.module.css';
 import Feature from '../../src/components/Feature';
 import Grid from '../../src/components/Grid';
-import FooterMenu from '../../../src/components/FooterMenu';
+import FooterMenu from '../../src/components/FooterMenu';
 
 const FeatureList = [
   {
