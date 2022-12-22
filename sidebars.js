@@ -153,8 +153,9 @@ module.exports = {
         "platform/deployment/production-deployment-automation",
         {
           type: "category",
-          label: "Performance and storage tuning",
+          label: "Performance and Tuning",
           items: [
+            "platform/deployment/high-availability",
             "platform/deployment/disk-utilization",
             "platform/deployment/io-optimization",
           ],
@@ -250,7 +251,24 @@ module.exports = {
         },
         "platform/data-management/remote-read-replicas",
         "platform/data-management/data-migration",
-        "platform/data-management/rack-awareness",
+        {
+          type: "category",
+          label: "Rack Awareness",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "doc",
+              label: "Manual Deployment",
+              id: "platform/data-management/rack-awareness",
+            },
+            {
+              type: "doc",
+              label: "Kubernetes Deployment",
+              id: "platform/data-management/kubernetes-rack-awareness",
+            },
+          ],
+        },
       ],
     },
     {
@@ -394,6 +412,7 @@ module.exports = {
         "platform/reference/tunable-properties",
         "platform/reference/node-properties",
         "platform/reference/node-configuration-sample",
+        "platform/reference/schema-registry-api",
         {
           type: "category",
           label: "rpk Commands",

@@ -1,6 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './index.module.css';
+import Feature from '../../../../../src/components/Feature';
+import Grid from '../../../../../src/components/Grid';
 
 const FeatureList = [
   {
@@ -11,7 +13,7 @@ const FeatureList = [
         Export data from topics to external systems using managed connectors.
       </>
     ),
-    url: '/docs/platform/deployment/cloud/managed-connectors',
+    url: '/docs/cloud/managed-connectors/',
   },
   {
     title: 'Dedicated vs BYOC',
@@ -21,7 +23,7 @@ const FeatureList = [
         Understand the differences between deploying in Redpanda's dedicated cloud and deploying in your own VPC.
       </>
     ),
-    url: '/docs/platform/deployment/cloud/dedicated-byoc',
+    url: '/docs/cloud/dedicated-byoc',
   },
   {
     title: 'Create a Dedicated Cluster',
@@ -31,7 +33,7 @@ const FeatureList = [
         Deploy a cluster in Redpanda's VPC.
       </>
     ),
-    url: '/docs/platform/deployment/cloud/create-dedicated-cloud-cluster-aws',
+    url: '/docs/cloud/create-dedicated-cloud-cluster-aws',
   },
   {
     title: 'Create a BYOC cluster',
@@ -41,7 +43,7 @@ const FeatureList = [
         Bring Your Own Cloud (BYOC) and deploy a Redpanda cluster.
       </>
     ),
-    url: '/docs/platform/deployment/cloud/create-byoc-cluster-aws/',
+    url: '/docs/cloud/create-byoc-cluster-aws',
   },
   {
     title: 'VPC Peering',
@@ -51,7 +53,7 @@ const FeatureList = [
         Create a networking connection between your VPC and Redpanda's VPC.
       </>
     ),
-    url: '/docs/platform/deployment/cloud/vpc-peering/',
+    url: '/docs/cloud/vpc-peering/',
   },
   {
     title: 'Create a topic',
@@ -61,51 +63,18 @@ const FeatureList = [
         Create a topic in Redpanda's Cloud. 
       </>
     ),
-    url: '/docs/platform/deployment/cloud/create-topic/',
+    url: '/docs/cloud/create-topic/',
   },
 ];
-
-function Feature({image, title, description, url}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className={styles.padding}>
-      <div className={styles.border}>
-          <div className="text--center">
-            <a href={url}>
-            <img src={image} className={styles.featureSvg} alt={title} />
-            </a>
-          </div>
-        <div className={styles.box} >
-          <a href={url}>
-          <span className={styles.body_title}>{title}</span>
-          </a>
-          <div className={styles.body_text}>
-            <p>{description}</p>
-
-          </div>
-          <div className={styles.learn}>
-              <a href={url}><p>Learn more -> </p></a>
-            </div>
-
-        </div>
-      </div>
-    </div>
-    </div>
-  );
-}
 
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div class={clsx('border border-primary')}>
-      <div className="container">
-        <div className="row">
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
-          </div>
-        </div>
-        </div>
+      <Grid gap="2rem" minWidth="250px">
+        {FeatureList.map((props, idx) => (
+          <Feature key={idx} {...props} />
+        ))}
+      </Grid>
     </section>
   );
 }
