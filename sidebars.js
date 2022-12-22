@@ -19,22 +19,41 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Introduction",
-      link: { type: "doc", id: "platform/introduction/index" },
+      label: "Getting Started",
+      link: { type: "doc", id: "platform/getting-started/index" },
       collapsible: true,
       collapsed: true,
       items: [
         {
           type: "doc",
           label: "Introduction to Events and Streaming",
-          id: "platform/introduction/intro-to-events",
+          id: "platform/getting-started/intro-to-events",
         },
         {
           type: "doc",
-          label: "Designed for Performance",
-          id: "platform/introduction/autotune",
+          label: "Redpanda Licensing",
+          id: "platform/getting-started/licenses",
         },
-        "platform/introduction/licenses",
+        {
+          type: "doc",
+          label: " Redpanda Quickstart",
+          id: "platform/getting-started/quickstart/quick-start-docker",
+        },
+        {
+          type: "doc",
+          label: "Install rpk",
+          id: "platform/getting-started/quickstart/rpk-install",
+        },
+        {
+          type: "doc",
+          label: "Introduction to Redpanda Console",
+          id: "platform/getting-started/console/index" 
+        },
+        {
+          type: "doc",
+          label: "Build a Sample Application",
+          id: "platform/getting-started/code-examples",
+        },
       ],
     },
     {
@@ -51,11 +70,6 @@ module.exports = {
           collapsed: true,
           link: { type: "doc", id: "platform/quickstart/index" },
           items: [
-            {
-              type: "doc",
-              label: "Docker",
-              id: "platform/quickstart/quick-start-docker",
-            },
             {
               type: "doc",
               label: "Kubernetes",
@@ -78,11 +92,7 @@ module.exports = {
             },
           ],
         },
-        {
-          type: "doc",
-          label: "Install rpk",
-          id: "platform/quickstart/rpk-install",
-        },
+        
         "platform/quickstart/console-installation",
         {
           type: "doc",
@@ -324,80 +334,24 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Redpanda Console",
-      link: { type: "doc", id: "platform/console/index" },
+      label: "Redpanda Console Reference",
       collapsible: true,
       collapsed: true,
       items: [
         {
-          type: "category",
-          label: "Features",
-          items: [
-            "platform/console/features/kafka-connect",
-            "platform/console/features/record-deserialization",
-            "platform/console/features/schema-registry",
-            "platform/console/features/protobuf",
-            "platform/console/features/topic-documentation",
-            "platform/console/features/programmable-push-filters",
-            "platform/console/features/http-path-rewrites",
-          ],
+          type: "doc",
+          label: "Redpanda Console Configuration",
+          id: "platform/console/reference/config",
         },
         {
-          type: "category",
-          label: "Single Sign On",
-          items: [
-            {
-              type: "doc",
-              label: "Authentication",
-              id: "platform/console/single-sign-on/authentication",
-            },
-            {
-              type: "doc",
-              label: "Authorization",
-              id: "platform/console/single-sign-on/authorization",
-            },
-            {
-              type: "doc",
-              label: "GitHub",
-              id: "platform/console/single-sign-on/identity-providers/github",
-            },
-            {
-              type: "doc",
-              label: "Google",
-              id: "platform/console/single-sign-on/identity-providers/google",
-            },
-            {
-              type: "doc",
-              label: "Okta",
-              id: "platform/console/single-sign-on/identity-providers/okta",
-            },
-            {
-              type: "doc",
-              label: "Generic OIDC",
-              id: "platform/console/single-sign-on/identity-providers/generic-oidc",
-            },
-          ],
+          type: "doc",
+          label: "Redpanda Console Role-Binding Configuration",
+          id: "platform/console/reference/role-bindings",
         },
         {
-          type: "category",
-          label: "Reference",
-          items: [
-            {
-              type: "doc",
-              label: "Redpanda Console Configuration",
-              id: "platform/console/reference/config",
-            },
-            {
-              type: "doc",
-              label: "Redpanda Console Role-Binding Configuration",
-              id: "platform/console/reference/role-bindings",
-            },
-            {
-              type: "doc",
-              label: "Docker Compose Configuration",
-              id: "platform/console/reference/docker-compose",
-            },
-          ],
+          type: "doc",
+          label: "Docker Compose Configuration",
+          id: "platform/console/reference/docker-compose",
         },
       ],
     },
