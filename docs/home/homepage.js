@@ -76,7 +76,7 @@ const FooterMenuList = [
       { text: 'Redpanda Licensing', url: "" },
       { text: 'Redpanda Quickstart', url: "" },
       { text: 'Install rpk', url: "" },
-      { text: 'Explore Redpanda', url: "" },
+      { text: 'Introduction to Redpanda Console', url: "" },
     ],
   },
   {
