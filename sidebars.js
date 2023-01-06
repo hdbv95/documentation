@@ -19,40 +19,273 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Getting Started",
-      link: { type: "doc", id: "platform/getting-started/index" },
+      label: "Get Started",
+      link: { type: "doc", id: "platform/get-started/index" },
       collapsible: true,
       collapsed: true,
       items: [
         {
           type: "doc",
           label: "Introduction to Events and Streaming",
-          id: "platform/getting-started/intro-to-events",
+          id: "platform/get-started/intro-to-events",
         },
         {
           type: "doc",
           label: "Redpanda Licensing",
-          id: "platform/getting-started/licenses",
+          id: "platform/get-started/licenses",
         },
         {
           type: "doc",
           label: " Redpanda Quickstart",
-          id: "platform/getting-started/quickstart/quick-start-docker",
+          id: "platform/get-started/quickstart/quick-start-docker",
         },
         {
           type: "doc",
           label: "Install rpk",
-          id: "platform/getting-started/quickstart/rpk-install",
+          id: "platform/get-started/quickstart/rpk-install",
         },
         {
           type: "doc",
           label: "Introduction to Redpanda Console",
-          id: "platform/getting-started/console/index" 
+          id: "platform/get-started/console/index"
         },
         {
           type: "doc",
           label: "Build a Sample Application",
-          id: "platform/getting-started/code-examples",
+          id: "platform/get-started/code-examples",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Develop",
+      link: { type: "doc", id: "platform/develop/index" },
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "doc",
+          label: "Suported Kafka Clients",
+          id: "platform/develop/kafka-clients",
+        },
+        "platform/develop/code-examples",
+        "platform/develop/guide-nodejs",
+        "platform/develop/http-proxy",
+        {
+          type: "category",
+          label: "Produce Data",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "doc",
+              label: "Idempotent Producers",
+              id: "platform/develop/idempotent-producers",
+            },
+          ]
+        },
+        {
+          type: "category",
+          label: "Consume Data",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "doc",
+              label: "Consumer Offsets",
+              id: "platform/develop/consumer-offsets",
+            },
+          ]
+        },
+
+        "platform/develop/transactions",
+      ],
+    },
+    {
+      type: "category",
+      label: "Deploy",
+      collapsible: true,
+      link: { type: "doc", id: "platform/deploy/index" },
+      collapsed: true,
+      items: [
+        {
+          type: "category",
+          label: " Choose a Deployment Option",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "category",
+              label: "Redpanda Self-Hosted",
+              collapsed: true,
+              collapsible: true,
+              items: [
+                "platform/deploy/tiered-storage",
+              ]
+            },
+            {
+              type: "category",
+              label: "HA Deployment Options",
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: "doc",
+                  label: "Rack Awareness",
+                  id: "platform/deploy/rack-awareness",
+                },
+              ]
+            },
+            {
+              type: "category",
+              label: "Kubernetes",
+              collapsed: true,
+              collapsible: true,
+              items: [
+                "platform/deploy/production-deployment",
+              ]
+            },
+            {
+              type: "category",
+              label: "Manual",
+              collapsed: true,
+              collapsible: true,
+              items: [
+                {
+                  type: "doc",
+                  label: "Use Terraform and Ansible to Deploy Redpanda",
+                  id: "platform/deploy/production-deployment-automation",
+                },
+                {
+                  type: "doc",
+                  label: "Use rpm and Debian Packages to Deploy Redpanda",
+                  id: "platform/deploy/production-deployment",
+                },
+                "platform/deploy/node-property-configuration",
+              ]
+            },
+            {
+              type: "category",
+              label: "Redpanda Cloud",
+              collapsed: true,
+              collapsible: true,
+              link: { type: "doc", id: "platform/deploy/cloud/index/index" },
+              items: [
+                {
+                  type: "doc",
+                  label: "Redpanda Cloud Overview",
+                  id: "platform/deploy/cloud/dedicated-byoc",
+                },
+                {
+                  type: "category",
+                  label: "Redpanda Dedicated",
+                  collapsed: true,
+                  collapsible: true,
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Create Clusters",
+                      id: "platform/deploy/cloud/create-dedicated-cloud-cluster-aws",
+                    },
+                    {
+                      type: "doc",
+                      label: "VPC Peering",
+                      id: "platform/deploy/cloud/vpc-peering",
+                    },
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Redpanda BYOC",
+                  collapsed: true,
+                  collapsible: true,
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Create Cluster on AWS",
+                      id: "platform/deploy/cloud/create-byoc-cluster-aws",
+                    },
+                  ],
+                },
+                {
+                  type: "category",
+                  label: "Managed Connectors",
+                  collapsed: true,
+                  collapsible: true,
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Create an S3 Sink Connector",
+                      id: "platform/deploy/cloud/managed-connectors/create-s3-sink-connector",
+                    },
+                  ],
+                },
+              ]
+            },
+            {
+              type: "doc",
+              label: "Create a Topic",
+              id: "platform/deploy/cloud/create-topic",
+            },
+          ],
+        },
+        {
+          type: "category",
+          label: "Performance and Tuning",
+          items: [
+            "platform/deploy/high-availability",
+            "platform/deploy/disk-utilization",
+            "platform/deploy/io-optimization",
+          ],
+        },
+        {
+          type: "doc",
+          label: "Writing Custom Deployment",
+          id: "platform/deploy/custom-deployment",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Manage",
+      collapsible: true,
+      collapsed: true,
+      items: [
+        {
+          type: "category",
+          label: "Manage Self-Hosted",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            "platform/manage/continuous-data-balancing",
+            {
+              type: "doc",
+              label: "Configure Node Maintenance Mode",
+              id: "platform/manage/node-management",
+            },
+            "platform/manage/remote-read-replicas",
+            "platform/manage/monitoring",
+          ],
+        },
+        {
+          type: "category",
+          label: "Security",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "category",
+              label: "Self-Hosted",
+              link: { type: "doc", id: "platform/manage/security/index" },
+              items: [
+                "platform/manage/security/encryption",
+                "platform/manage/security/authentication",
+                "platform/manage/security/listener-configuration",
+                "platform/manage/security/authorization",
+                "platform/manage/security/iam-roles",
+              ],
+            },
+          ],
         },
       ],
     },
@@ -92,7 +325,7 @@ module.exports = {
             },
           ],
         },
-        
+
         "platform/quickstart/console-installation",
         {
           type: "doc",
@@ -111,81 +344,10 @@ module.exports = {
         },
       ],
     },
-
-    {
-      type: "category",
-      label: "Deployment",
-      collapsible: true,
-      link: { type: "doc", id: "platform/deployment/index" },
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Redpanda Cloud",
-          collapsible: true,
-          link: { type: "doc", id: "platform/deployment/cloud/index/index" },
-          collapsed: true,
-          items: [
-          {
-            type: "doc",
-            label: "Dedicated Cloud vs. BYOC",
-            id: "platform/deployment/cloud/dedicated-byoc",
-          },
-          {
-            type: "doc",
-            label: "Creating a Dedicated Cloud Cluster on AWS",
-            id: "platform/deployment/cloud/create-dedicated-cloud-cluster-aws",
-          },
-          {
-            type: "doc",
-            label: "Creating a BYOC Cluster on AWS",
-            id: "platform/deployment/cloud/create-byoc-cluster-aws",
-          },
-          {
-            type: "doc",
-            label: "VPC Peering",
-            id: "platform/deployment/cloud/vpc-peering",
-          },
-          {
-            type: "doc",
-            label: "Creating a Topic",
-            id: "platform/deployment/cloud/create-topic",
-          },
-          {
-            type: "category",
-            label: "Managed Connectors",
-            link: { type: "doc", id: "platform/deployment/cloud/managed-connectors/index" },
-            items: ["platform/deployment/cloud/managed-connectors/create-s3-sink-connector"],
-          },]
-        }
-        ,
-
-        "platform/deployment/production-deployment-automation",
-        {
-          type: "category",
-          label: "Performance and Tuning",
-          items: [
-            "platform/deployment/high-availability",
-            "platform/deployment/disk-utilization",
-            "platform/deployment/io-optimization",
-          ],
-        },
-        {
-          type: "doc",
-          label: "Deploying for Production",
-          id: "platform/deployment/production-deployment",
-        },
-        {
-          type: "doc",
-          label: "Writing Custom Deployment",
-          id: "platform/deployment/custom-deployment",
-        },
-      ],
-    },
     {
       type: "category",
       label: "Cluster Administration",
-      link: { type: "doc", id: "platform/cluster-administration/index" },
+      link: { type: "doc", id: "platform/manage/index" },
       collapsible: true,
       collapsed: true,
       items: [
@@ -194,45 +356,21 @@ module.exports = {
           label: "Configuration",
           link: {
             type: "doc",
-            id: "platform/cluster-administration/configuration",
+            id: "platform/manage/configuration",
           },
           items: [
             {
               type: "doc",
               label: "Configuring Cluster Properties",
-              id: "platform/cluster-administration/cluster-property-configuration",
+              id: "platform/manage/cluster-property-configuration",
             },
             {
               type: "doc",
               label: "Configuring Node Properties",
-              id: "platform/cluster-administration/node-property-configuration",
-            },
-            "platform/cluster-administration/listener-configuration",
-          ],
-        },
-        {
-          type: "category",
-          label: "Cluster balancing",
-          collapsible: true,
-          collapsed: true,
-          link: {
-            type: "doc",
-            id: "platform/cluster-administration/cluster-balancing",
-          },
-          items: [
-            {
-              type: "doc",
-              label: "Configuring Continuous Data Balancing",
-              id: "platform/cluster-administration/continuous-data-balancing",
+              id: "platform/manage/node-property-configuration",
             },
           ],
         },
-        {
-          type: "doc",
-          label: "Node Maintenance Mode",
-          id: "platform/cluster-administration/node-management",
-        },
-        "platform/cluster-administration/monitoring",
       ],
     },
     {
@@ -259,7 +397,6 @@ module.exports = {
             },
           ],
         },
-        "platform/data-management/remote-read-replicas",
         "platform/data-management/data-migration",
         {
           type: "category",
@@ -267,11 +404,6 @@ module.exports = {
           collapsible: true,
           collapsed: true,
           items: [
-            {
-              type: "doc",
-              label: "Manual Deployment",
-              id: "platform/data-management/rack-awareness",
-            },
             {
               type: "doc",
               label: "Kubernetes Deployment",
@@ -283,35 +415,10 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Development",
-      link: { type: "doc", id: "platform/development/index" },
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: "doc",
-          label: "Kafka clients",
-          id: "platform/development/kafka-clients",
-        },
-        "platform/development/code-examples",
-        "platform/development/guide-nodejs",
-        "platform/development/consumer-offsets",
-        "platform/development/idempotent-producers",
-        "platform/development/transactions",
-        "platform/development/http-proxy",
-      ],
-    },
-    {
-      type: "category",
       label: "Security",
-      link: { type: "doc", id: "platform/security/index" },
       collapsible: true,
       collapsed: true,
       items: [
-        "platform/security/encryption",
-        "platform/security/authentication",
-        "platform/security/authorization",
-        "platform/security/iam-roles",
         {
           type: "category",
           label: "Security on Kubernetes",
