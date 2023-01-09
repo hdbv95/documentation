@@ -431,29 +431,6 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Redpanda Console Reference",
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: "doc",
-          label: "Redpanda Console Configuration",
-          id: "platform/console/reference/config",
-        },
-        {
-          type: "doc",
-          label: "Redpanda Console Role-Binding Configuration",
-          id: "platform/console/reference/role-bindings",
-        },
-        {
-          type: "doc",
-          label: "Docker Compose Configuration",
-          id: "platform/console/reference/docker-compose",
-        },
-      ],
-    },
-    {
-      type: "category",
       label: "Reference",
       link: { type: "doc", id: "platform/reference/index" },
       collapsible: true,
@@ -832,6 +809,29 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Redpanda Console",
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "doc",
+              label: "Redpanda Console Configuration",
+              id: "platform/reference/console/config",
+            },
+            {
+              type: "doc",
+              label: "Redpanda Console Role-Binding Configuration",
+              id: "platform/reference/console/role-bindings",
+            },
+            {
+              type: "doc",
+              label: "Docker Compose Configuration",
+              id: "platform/reference/console/docker-compose",
+            },
+          ],
+        },
+        {
+          type: "category",
           label: "HA Deployment Options",
           collapsed: true,
           collapsible: true,
@@ -839,7 +839,7 @@ module.exports = {
             {
               type: "doc",
               label: "Rack Awareness",
-              id: "platform/deploy/rack-awareness",
+              id: "platform/reference/rack-awareness",
             },
           ]
         },
