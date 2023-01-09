@@ -6,7 +6,7 @@ import FooterMenu from '../../src/components/FooterMenu';
 
 const FeatureList = [
   {
-    title: 'Get Started with Redpanda',
+    title: 'Redpanda Quickstart',
     image: require('../../static/img/quickstart.png').default,
     description: (
       <>
@@ -14,29 +14,10 @@ const FeatureList = [
       </>
     ),
     url: '/docs/platform/quickstart/',
+    learnText: true,
   },
   {
-    title: 'Deploying for Production',
-    image: require('../../static/img/deployment.png').default,
-    description: (
-      <>
-        Install and configure Redpanda.
-      </>
-    ),
-    url: '/docs/platform/deployment/production-deployment',
-  },
-  {
-    title: 'Redpanda Console',
-    image: require('../../static/img/console-docs.png').default,
-    description: (
-      <>
-        Use the Redpanda Console dashboard to administer clusters and get visibility into your data streams.
-      </>
-    ),
-    url: '/docs/platform/quickstart/console-installation',
-  },
-  {
-    title: 'rpk Command Reference',
+    title: 'Use rpk',
     image: require('../../static/img/RPK-commands.png').default,
     description: (
       <>
@@ -44,26 +25,51 @@ const FeatureList = [
       </>
     ),
     url: '/docs/platform/reference/rpk',
+    learnText: true,
+  },
+  {
+    title: 'Deploy Redpanda',
+    image: require('../../static/img/rocket.png').default,
+    description: (
+      <>
+        Install and configure Redpanda.
+      </>
+    ),
+    url: '/docs/platform/deployment/production-deployment',
+    learnText: true,
+  },
+  {
+    title: 'Redpanda Console',
+    image: require('../../static/img/console-icon.png').default,
+    description: (
+      <>
+        Use the Redpanda Console dashboard to administer clusters and get visibility into your data streams.
+      </>
+    ),
+    url: '/docs/platform/quickstart/console-installation',
+    learnText: true,
   },
   {
     title: 'Tiered Storage',
-    image: require('../../static/img/try-now.png').default,
+    image: require('../../static/img/cloud-first.png').default,
     description: (
       <>
         Save storage costs by offloading log segments to the cloud.
       </>
     ),
     url: '/docs/platform/data-management/tiered-storage',
+    learnText: true,
   },
   {
     title: 'Sizing Guidelines',
-    image: require('../../static/img/get-started.png').default,
+    image: require('../../static/img/self-balance.png').default,
     description: (
       <>
         Size your production clusters to maximize performance.
       </>
     ),
     url: 'https://redpanda.com/blog/sizing-redpanda-cluster-best-practices',
+    learnText: true,
   },
 ];
 
@@ -117,12 +123,12 @@ const FooterMenuList = [
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <Grid gap="2rem" minWidth="300px">
+      <Grid gap="2rem" minWidth="300px" title='Most Visited'>
         {FeatureList.map((props, idx) => (
           <Feature key={idx} {...props} />
         ))}
       </Grid>
-      <Grid gap="3.85rem" minWidth="175px">
+      <Grid gap="3.85rem" minWidth="175px" title='Highlights'>
         {FooterMenuList.map((props, idx) => (
           <FooterMenu key={idx} {...props} />
         ))}

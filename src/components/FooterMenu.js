@@ -5,7 +5,7 @@ export default function FooterMenu({ title, items }) {
     return (
         <div className={styles.MenuContainer}>
             <div className={styles.featureText}>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
                 <ul className={styles.MenuList}>
                     {items && items.map((element, idx) => (
                         <li key={idx} className={styles.MenuListItem}>

@@ -31,12 +31,6 @@ a.featureLink:hover .featureBox {
 .featureImage {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #F5F7F9;
 }
 
 .featureImage img {
