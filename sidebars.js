@@ -116,57 +116,44 @@ module.exports = {
           items: [
             {
               type: "category",
-              label: "Redpanda Self-Hosted",
+              label: "Self-Hosted",
               collapsed: true,
               collapsible: true,
               items: [
                 "platform/deploy/tiered-storage",
-              ]
-            },
-            {
-              type: "category",
-              label: "HA Deployment Options",
-              collapsed: true,
-              collapsible: true,
-              items: [
                 {
-                  type: "doc",
-                  label: "Rack Awareness",
-                  id: "platform/deploy/rack-awareness",
+                  type: "category",
+                  label: "Kubernetes",
+                  collapsed: true,
+                  collapsible: true,
+                  items: [
+                    "platform/deploy/production-deployment",
+                  ]
+                },
+                {
+                  type: "category",
+                  label: "Manual",
+                  collapsed: true,
+                  collapsible: true,
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Use Terraform and Ansible to Deploy Redpanda",
+                      id: "platform/deploy/production-deployment-automation",
+                    },
+                    {
+                      type: "doc",
+                      label: "Use rpm and Debian Packages to Deploy Redpanda",
+                      id: "platform/deploy/production-deployment",
+                    },
+                    "platform/deploy/node-property-configuration",
+                  ]
                 },
               ]
             },
             {
               type: "category",
-              label: "Kubernetes",
-              collapsed: true,
-              collapsible: true,
-              items: [
-                "platform/deploy/production-deployment",
-              ]
-            },
-            {
-              type: "category",
-              label: "Manual",
-              collapsed: true,
-              collapsible: true,
-              items: [
-                {
-                  type: "doc",
-                  label: "Use Terraform and Ansible to Deploy Redpanda",
-                  id: "platform/deploy/production-deployment-automation",
-                },
-                {
-                  type: "doc",
-                  label: "Use rpm and Debian Packages to Deploy Redpanda",
-                  id: "platform/deploy/production-deployment",
-                },
-                "platform/deploy/node-property-configuration",
-              ]
-            },
-            {
-              type: "category",
-              label: "Redpanda Cloud",
+              label: "Cloud",
               collapsed: true,
               collapsible: true,
               link: { type: "doc", id: "platform/deploy/cloud/index/index" },
@@ -208,6 +195,11 @@ module.exports = {
                   ],
                 },
                 {
+                  type: "doc",
+                  label: "Create a Topic",
+                  id: "platform/deploy/cloud/create-topic",
+                },
+                {
                   type: "category",
                   label: "Managed Connectors",
                   collapsed: true,
@@ -222,20 +214,6 @@ module.exports = {
                 },
               ]
             },
-            {
-              type: "doc",
-              label: "Create a Topic",
-              id: "platform/deploy/cloud/create-topic",
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Performance and Tuning",
-          items: [
-            "platform/deploy/high-availability",
-            "platform/deploy/disk-utilization",
-            "platform/deploy/io-optimization",
           ],
         },
         {
@@ -285,6 +263,15 @@ module.exports = {
                 "platform/manage/security/iam-roles",
               ],
             },
+          ],
+        },
+        {
+          type: "category",
+          label: "Performance and Tuning",
+          items: [
+            "platform/manage/high-availability",
+            "platform/manage/disk-utilization",
+            "platform/manage/io-optimization",
           ],
         },
       ],
@@ -839,6 +826,19 @@ module.exports = {
           type: "link",
           label: "Release notes",
           href: "https://github.com/redpanda-data/redpanda/releases",
+        },
+        {
+          type: "category",
+          label: "HA Deployment Options",
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              type: "doc",
+              label: "Rack Awareness",
+              id: "platform/deploy/rack-awareness",
+            },
+          ]
         },
       ],
     },
