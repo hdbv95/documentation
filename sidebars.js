@@ -120,7 +120,6 @@ module.exports = {
               collapsed: true,
               collapsible: true,
               items: [
-                "platform/deploy/tiered-storage",
                 {
                   type: "category",
                   label: "Kubernetes",
@@ -231,40 +230,70 @@ module.exports = {
       items: [
         {
           type: "category",
-          label: "Manage Self-Hosted",
-          collapsible: true,
-          collapsed: true,
-          items: [
-            "platform/manage/continuous-data-balancing",
-            {
-              type: "doc",
-              label: "Configure Node Maintenance Mode",
-              id: "platform/manage/node-management",
-            },
-            "platform/manage/remote-read-replicas",
-            "platform/manage/monitoring",
-          ],
-        },
-        {
-          type: "category",
-          label: "Security",
+          label: "Self-Hosted",
           collapsible: true,
           collapsed: true,
           items: [
             {
               type: "category",
-              label: "Self-Hosted",
-              link: { type: "doc", id: "platform/manage/security/index" },
+              label: "Kubernetes",
+              collapsible: true,
+              collapsed: true,
               items: [
-                "platform/manage/security/encryption",
-                "platform/manage/security/authentication",
-                "platform/manage/security/listener-configuration",
-                "platform/manage/security/authorization",
-                "platform/manage/security/iam-roles",
+                "platform/manage/tiered-storage",
+                "platform/manage/remote-read-replicas",
+                {
+                  type: "category",
+                  label: "Security",
+                  collapsible: true,
+                  collapsed: true,
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Configuring TLS on Kubernetes",
+                      id: "platform/manage/security/kubernetes-tls",
+                    },
+                    {
+                      type: "doc",
+                      label: "Configuring SASL on Kubernetes",
+                      id: "platform/manage/security/sasl-kubernetes",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "category",
+              label: "Manual",
+              collapsible: true,
+              collapsed: true,
+              items: [
+                "platform/manage/continuous-data-balancing",
+                {
+                  type: "doc",
+                  label: "Configure Node Maintenance Mode",
+                  id: "platform/manage/node-management",
+                },
+                "platform/manage/remote-read-replicas",
+                {
+                  type: "category",
+                  label: "Security",
+                  link: { type: "doc", id: "platform/manage/security/index" },
+                  collapsible: true,
+                  collapsed: true,
+                  items: [
+                    "platform/manage/security/encryption",
+                    "platform/manage/security/authentication",
+                    "platform/manage/security/listener-configuration",
+                    "platform/manage/security/authorization",
+                    "platform/manage/security/iam-roles",
+                  ],
+                },
               ],
             },
           ],
         },
+        "platform/manage/monitoring",
         {
           type: "category",
           label: "Performance and Tuning",
@@ -395,32 +424,6 @@ module.exports = {
               type: "doc",
               label: "Kubernetes Deployment",
               id: "platform/data-management/kubernetes-rack-awareness",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Security",
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Security on Kubernetes",
-          collapsible: true,
-          collapsed: true,
-          items: [
-            {
-              type: "doc",
-              label: "Configuring TLS on Kubernetes",
-              id: "platform/security/kubernetes-tls",
-            },
-            {
-              type: "doc",
-              label: "Configuring SASL on Kubernetes",
-              id: "platform/security/sasl-kubernetes",
             },
           ],
         },
