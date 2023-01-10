@@ -116,37 +116,37 @@ module.exports = {
           link: { type: "doc", id: "platform/deployment/cloud/index/index" },
           collapsed: true,
           items: [
-          {
-            type: "doc",
-            label: "Dedicated Cloud vs. BYOC",
-            id: "platform/deployment/cloud/dedicated-byoc",
-          },
-          {
-            type: "doc",
-            label: "Creating a Dedicated Cloud Cluster on AWS",
-            id: "platform/deployment/cloud/create-dedicated-cloud-cluster-aws",
-          },
-          {
-            type: "doc",
-            label: "Creating a BYOC Cluster on AWS",
-            id: "platform/deployment/cloud/create-byoc-cluster-aws",
-          },
-          {
-            type: "doc",
-            label: "VPC Peering",
-            id: "platform/deployment/cloud/vpc-peering",
-          },
-          {
-            type: "doc",
-            label: "Creating a Topic",
-            id: "platform/deployment/cloud/create-topic",
-          },
-          {
-            type: "category",
-            label: "Managed Connectors",
-            link: { type: "doc", id: "platform/deployment/cloud/managed-connectors/index" },
-            items: ["platform/deployment/cloud/managed-connectors/create-s3-sink-connector"],
-          },]
+            {
+              type: "doc",
+              label: "Dedicated Cloud vs. BYOC",
+              id: "platform/deployment/cloud/dedicated-byoc",
+            },
+            {
+              type: "doc",
+              label: "Creating a Dedicated Cloud Cluster on AWS",
+              id: "platform/deployment/cloud/create-dedicated-cloud-cluster-aws",
+            },
+            {
+              type: "doc",
+              label: "Creating a BYOC Cluster on AWS",
+              id: "platform/deployment/cloud/create-byoc-cluster-aws",
+            },
+            {
+              type: "doc",
+              label: "VPC Peering",
+              id: "platform/deployment/cloud/vpc-peering",
+            },
+            {
+              type: "doc",
+              label: "Creating a Topic",
+              id: "platform/deployment/cloud/create-topic",
+            },
+            {
+              type: "category",
+              label: "Managed Connectors",
+              link: { type: "doc", id: "platform/deployment/cloud/managed-connectors/index" },
+              items: ["platform/deployment/cloud/managed-connectors/create-s3-sink-connector"],
+            },]
         }
         ,
 
@@ -269,6 +269,7 @@ module.exports = {
             },
           ],
         },
+        "platform/data-management/schema-registry",
       ],
     },
     {
@@ -286,6 +287,7 @@ module.exports = {
         "platform/development/code-examples",
         "platform/development/guide-nodejs",
         "platform/development/consumer-offsets",
+        "platform/development/configure-producers",
         "platform/development/idempotent-producers",
         "platform/development/transactions",
         "platform/development/http-proxy",
