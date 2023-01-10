@@ -200,6 +200,11 @@ module.exports = {
                       label: "Create Cluster on AWS",
                       id: "platform/deploy/cloud/create-byoc-cluster-aws",
                     },
+                    {
+                      type: "doc",
+                      label: "Create Cluster on GCP",
+                      id: "platform/deploy/cloud/create-byoc-cluster-gcp",
+                    },
                   ],
                 },
                 {
