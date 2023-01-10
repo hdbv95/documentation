@@ -244,8 +244,6 @@ module.exports = {
               collapsible: true,
               collapsed: true,
               items: [
-                "platform/manage/tiered-storage",
-                "platform/manage/remote-read-replicas",
                 {
                   type: "category",
                   label: "Security",
@@ -254,12 +252,12 @@ module.exports = {
                   items: [
                     {
                       type: "doc",
-                      label: "Configuring TLS on Kubernetes",
+                      label: "Configure TLS on Kubernetes",
                       id: "platform/manage/security/kubernetes-tls",
                     },
                     {
                       type: "doc",
-                      label: "Configuring SASL on Kubernetes",
+                      label: "Configure SASL on Kubernetes",
                       id: "platform/manage/security/sasl-kubernetes",
                     },
                   ],
@@ -272,13 +270,53 @@ module.exports = {
               collapsible: true,
               collapsed: true,
               items: [
+                {
+                  type: "doc",
+                  label: "Configure Cluster Properties",
+                  id: "platform/manage/cluster-property-configuration",
+                },
+                {
+                  type: "doc",
+                  label: "Configure Node Properties",
+                  id: "platform/manage/node-property-configuration",
+                },
+                {
+                  type: "category",
+                  label: "Tiered Storage",
+                  collapsible: true,
+                  collapsed: true,
+                  link: {
+                    type: "doc",
+                    id: "platform/manage/tiered-storage",
+                  },
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Data Archiving",
+                      id: "platform/manage/data-archiving",
+                    },
+                  ],
+                },
                 "platform/manage/continuous-data-balancing",
                 {
                   type: "doc",
                   label: "Configure Node Maintenance Mode",
                   id: "platform/manage/node-management",
                 },
-                "platform/manage/remote-read-replicas",
+                "platform/manage/data-migration",
+                {
+                  type: "category",
+                  label: "Rack Awareness",
+                  collapsed: true,
+                  collapsible: true,
+                  items: [
+                    {
+                      type: "doc",
+                      label: "Rack Awareness",
+                      id: "platform/reference/rack-awareness",
+                    },
+                  ]
+                },
                 {
                   type: "category",
                   label: "Security",
@@ -290,14 +328,50 @@ module.exports = {
                     "platform/manage/security/authentication",
                     "platform/manage/security/listener-configuration",
                     "platform/manage/security/authorization",
+                    {
+                      "type": "category",
+                      "label": "Redpanda Console Security",
+                      "items": [
+                        {
+                          "type": "doc",
+                          "label": "Authentication",
+                          "id": "platform/manage/security/authentication"
+                        },
+                        {
+                          "type": "doc",
+                          "label": "Authorization",
+                          "id": "platform/manage/security/authorization"
+                        },
+                        {
+                          "type": "doc",
+                          "label": "GitHub",
+                          "id": "platform/get-started/console/index"
+                        },
+                        {
+                          "type": "doc",
+                          "label": "Google",
+                          "id": "platform/get-started/console/index"
+                        },
+                        {
+                          "type": "doc",
+                          "label": "Okta",
+                          "id": "platform/get-started/console/index"
+                        },
+                        {
+                          "type": "doc",
+                          "label": "Generic OIDC",
+                          "id": "platform/get-started/console/index"
+                        }
+                      ]
+                    },
                     "platform/manage/security/iam-roles",
                   ],
                 },
               ],
             },
+            "platform/manage/remote-read-replicas",
           ],
         },
-        "platform/manage/monitoring",
         {
           type: "category",
           label: "Performance and Tuning",
@@ -307,6 +381,7 @@ module.exports = {
             "platform/manage/io-optimization",
           ],
         },
+        "platform/manage/monitoring",
       ],
     },
     {
@@ -366,58 +441,11 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Cluster Administration",
-      link: { type: "doc", id: "platform/manage/index" },
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Configuration",
-          link: {
-            type: "doc",
-            id: "platform/manage/configuration",
-          },
-          items: [
-            {
-              type: "doc",
-              label: "Configuring Cluster Properties",
-              id: "platform/manage/cluster-property-configuration",
-            },
-            {
-              type: "doc",
-              label: "Configuring Node Properties",
-              id: "platform/manage/node-property-configuration",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      type: "category",
       label: "Data Management",
       link: { type: "doc", id: "platform/data-management/index" },
       collapsible: true,
       collapsed: true,
       items: [
-        {
-          type: "category",
-          label: "Tiered Storage",
-          collapsible: true,
-          collapsed: true,
-          link: {
-            type: "doc",
-            id: "platform/data-management/tiered-storage",
-          },
-          items: [
-            {
-              type: "doc",
-              label: "Data Archiving",
-              id: "platform/data-management/data-archiving",
-            },
-          ],
-        },
-        "platform/data-management/data-migration",
         {
           type: "category",
           label: "Rack Awareness",
