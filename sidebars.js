@@ -77,6 +77,7 @@ module.exports = {
           collapsible: true,
           collapsed: true,
           items: [
+            "platform/develop/configure-producers",
             {
               type: "doc",
               label: "Idempotent Producers",
