@@ -126,7 +126,11 @@ module.exports = {
                   collapsed: true,
                   collapsible: true,
                   items: [
-                    "platform/deploy/production-deployment",
+                    {
+                      type: "doc",
+                      label: "Deploy Using the Helm Chart",
+                      id: "platform/deploy/kubernetes-qs-dev",
+                    },
                   ]
                 },
                 {
@@ -137,13 +141,18 @@ module.exports = {
                   items: [
                     {
                       type: "doc",
+                      label: "Use rpm and Debian Packages to Deploy Redpanda",
+                      id: "platform/deploy/production-deployment",
+                    },
+                    {
+                      type: "doc",
                       label: "Use Terraform and Ansible to Deploy Redpanda",
                       id: "platform/deploy/production-deployment-automation",
                     },
                     {
                       type: "doc",
-                      label: "Use rpm and Debian Packages to Deploy Redpanda",
-                      id: "platform/deploy/production-deployment",
+                      label: "Write Custom Deployment",
+                      id: "platform/deploy/custom-deployment",
                     },
                     "platform/deploy/node-property-configuration",
                   ]
@@ -214,11 +223,6 @@ module.exports = {
               ]
             },
           ],
-        },
-        {
-          type: "doc",
-          label: "Writing Custom Deployment",
-          id: "platform/deploy/custom-deployment",
         },
       ],
     },
@@ -322,7 +326,7 @@ module.exports = {
             {
               type: "doc",
               label: "Kubernetes",
-              id: "platform/quickstart/kubernetes-qs-dev",
+              id: "platform/deploy/kubernetes-qs-dev",
             },
             {
               type: "doc",
