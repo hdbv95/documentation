@@ -76,6 +76,7 @@ const FeatureList = [
 const FooterMenuList = [
   {
     title: 'Get Started',
+    icon: require('../../static/img/get-started-icon.png').default,
     items: [
       { text: 'Introduction to Redpanda', url: "" },
       { text: 'How Redpanda Works', url: "" },
@@ -87,6 +88,7 @@ const FooterMenuList = [
   },
   {
     title: 'Develop',
+    icon: require('../../static/img/develop-icon.png').default,
     items: [
       { text: 'Supported Kafka Clients', url: "" },
       { text: 'Set Up and Use Redpanda with Kafka client libraries', url: "" },
@@ -100,6 +102,7 @@ const FooterMenuList = [
   },
   {
     title: 'Deploy',
+    icon: require('../../static/img/deploy-icon.png').default,
     items: [
       { text: 'Choosing a Deployment Option', url: "" },
       { text: 'Explore RedPanda Features', url: "" },
@@ -109,6 +112,7 @@ const FooterMenuList = [
   },
   {
     title: 'Manage',
+    icon: require('../../static/img/manage-icon.png').default,
     items: [
       { text: 'Manage Cloud', url: "" },
       { text: 'Managed Self Hosted', url: "" },

@@ -1,3 +1,8 @@
+div.MenuContainer {
+    padding: 2rem;
+    background: #F9FAFB;
+}
+
 ul.MenuList {
     padding: 0;
     list-style-type: none;
@@ -11,4 +16,14 @@ li.MenuListItem {
 a.MenuListItemLink {
     color: var(--ifm-font-color-base);
     font-weight: 400;
+}
+
+.FooterMenuHeader img {
+    width: 2.5rem;
+    height: 1.1rem;
+    padding-right: 1rem;
+}
+
+.FooterMenuHeader h3 {
+    display: inline-block;
 }
