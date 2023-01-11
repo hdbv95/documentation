@@ -25,9 +25,16 @@ module.exports = {
       collapsed: true,
       items: [
         {
-          type: "doc",
+          type: "category",
           label: "Introduction to Events and Streaming",
-          id: "platform/get-started/intro-to-events",
+          link: { type: "doc", id: "platform/get-started/intro-to-events" },
+          items: [
+            {
+              type: "doc",
+              label: "Start Streaming",
+              id: "platform/get-started/start-streaming",
+            },
+          ]
         },
         {
           type: "doc",
@@ -38,6 +45,50 @@ module.exports = {
           type: "doc",
           label: "Redpanda Quickstart",
           id: "platform/get-started/quickstart/quick-start-docker",
+        },
+        {
+          type: "category",
+          label: "Install and Upgrade",
+          link: { type: "doc", id: "platform/get-started/install-upgrade/index" },
+          collapsible: true,
+          collapsed: true,
+          items: [
+            {
+              type: "category",
+              label: "Install Redpanda",
+              collapsible: true,
+              collapsed: true,
+              link: { type: "doc", id: "platform/get-started/quickstart/index" },
+              items: [
+                {
+                  type: "doc",
+                  label: "Kubernetes",
+                  id: "platform/deploy/kubernetes-qs-dev",
+                },
+                {
+                  type: "doc",
+                  label: "Linux",
+                  id: "platform/get-started/quickstart/quick-start-linux",
+                },
+                {
+                  type: "doc",
+                  label: "macOS",
+                  id: "platform/get-started/quickstart/quick-start-macos",
+                },
+                {
+                  type: "doc",
+                  label: "Windows",
+                  id: "platform/get-started/quickstart/quick-start-windows",
+                },
+                "platform/get-started/quickstart/console-installation",
+              ],
+            },
+            {
+              type: "doc",
+              label: "Rolling Upgrades",
+              id: "platform/get-started/install-upgrade/rolling-upgrade",
+            },
+          ],
         },
         {
           type: "doc",
@@ -320,6 +371,7 @@ module.exports = {
                   label: "Rack Awareness",
                   id: "platform/manage/rack-awareness",
                 },
+                "platform/manage/remote-read-replicas",
                 "platform/manage/schema-registry",
                 {
                   type: "category",
@@ -373,7 +425,6 @@ module.exports = {
                 },
               ],
             },
-            "platform/manage/remote-read-replicas",
           ],
         },
         {
@@ -385,61 +436,6 @@ module.exports = {
             "platform/manage/io-optimization",
             "platform/manage/monitoring",
           ],
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Install and Upgrade",
-      link: { type: "doc", id: "platform/install-upgrade/index" },
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Install Redpanda",
-          collapsible: true,
-          collapsed: true,
-          link: { type: "doc", id: "platform/quickstart/index" },
-          items: [
-            {
-              type: "doc",
-              label: "Kubernetes",
-              id: "platform/deploy/kubernetes-qs-dev",
-            },
-            {
-              type: "doc",
-              label: "Linux",
-              id: "platform/quickstart/quick-start-linux",
-            },
-            {
-              type: "doc",
-              label: "macOS",
-              id: "platform/quickstart/quick-start-macos",
-            },
-            {
-              type: "doc",
-              label: "Windows",
-              id: "platform/quickstart/quick-start-windows",
-            },
-          ],
-        },
-
-        "platform/quickstart/console-installation",
-        {
-          type: "doc",
-          label: "Start Streaming",
-          id: "platform/install-upgrade/start-streaming",
-        },
-        {
-          type: "doc",
-          label: "Version Upgrade",
-          id: "platform/install-upgrade/version-upgrade",
-        },
-        {
-          type: "doc",
-          label: "Rolling Upgrades",
-          id: "platform/install-upgrade/rolling-upgrade",
         },
       ],
     },
@@ -818,7 +814,7 @@ module.exports = {
         "platform/reference/internal-metrics",
         {
           type: "link",
-          label: "Release notes",
+          label: "Release Notes",
           href: "https://github.com/redpanda-data/redpanda/releases",
         },
         {
