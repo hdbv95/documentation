@@ -230,7 +230,6 @@ module.exports = {
             },
           ],
         },
-        "platform/data-management/schema-registry",
       ],
     },
     {
@@ -312,18 +311,11 @@ module.exports = {
                 },
                 "platform/manage/data-migration",
                 {
-                  type: "category",
+                  type: "doc",
                   label: "Rack Awareness",
-                  collapsed: true,
-                  collapsible: true,
-                  items: [
-                    {
-                      type: "doc",
-                      label: "Rack Awareness",
-                      id: "platform/reference/rack-awareness",
-                    },
-                  ]
+                  id: "platform/manage/rack-awareness",
                 },
+                "platform/manage/schema-registry",
                 {
                   type: "category",
                   label: "Security",
@@ -386,9 +378,9 @@ module.exports = {
             "platform/manage/high-availability",
             "platform/manage/disk-utilization",
             "platform/manage/io-optimization",
+            "platform/manage/monitoring",
           ],
         },
-        "platform/manage/monitoring",
       ],
     },
     {
@@ -443,28 +435,6 @@ module.exports = {
           type: "doc",
           label: "Rolling Upgrades",
           id: "platform/install-upgrade/rolling-upgrade",
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Data Management",
-      link: { type: "doc", id: "platform/data-management/index" },
-      collapsible: true,
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Rack Awareness",
-          collapsible: true,
-          collapsed: true,
-          items: [
-            {
-              type: "doc",
-              label: "Kubernetes Deployment",
-              id: "platform/data-management/kubernetes-rack-awareness",
-            },
-          ],
         },
       ],
     },
@@ -868,19 +838,6 @@ module.exports = {
               id: "platform/reference/console/docker-compose",
             },
           ],
-        },
-        {
-          type: "category",
-          label: "HA Deployment Options",
-          collapsed: true,
-          collapsible: true,
-          items: [
-            {
-              type: "doc",
-              label: "Rack Awareness",
-              id: "platform/reference/rack-awareness",
-            },
-          ]
         },
       ],
     },
