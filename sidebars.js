@@ -36,7 +36,7 @@ module.exports = {
         },
         {
           type: "doc",
-          label: " Redpanda Quickstart",
+          label: "Redpanda Quickstart",
           id: "platform/get-started/quickstart/quick-start-docker",
         },
         {
@@ -250,6 +250,11 @@ module.exports = {
               collapsible: true,
               collapsed: true,
               items: [
+                {
+                  type: "doc",
+                  label: "Rack Awareness",
+                  id: "platform/manage/kubernetes-rack-awareness",
+                },
                 {
                   type: "category",
                   label: "Security",
