@@ -96,9 +96,17 @@ module.exports = {
           id: "platform/get-started/quickstart/rpk-install",
         },
         {
-          type: "doc",
+          type: "category",
           label: "Introduction to Redpanda Console",
-          id: "platform/get-started/console/index"
+          items: [
+            "platform/get-started/console/kafka-connect",
+            "platform/get-started/console/record-deserialization",
+            "platform/get-started/console/schema-registry",
+            "platform/get-started/console/protobuf",
+            "platform/get-started/console/topic-documentation",
+            "platform/get-started/console/programmable-push-filters",
+            "platform/get-started/console/http-path-rewrites",
+          ]
         },
         {
           type: "doc",
@@ -381,9 +389,7 @@ module.exports = {
                   collapsed: true,
                   items: [
                     "platform/manage/security/encryption",
-                    "platform/manage/security/authentication",
                     "platform/manage/security/listener-configuration",
-                    "platform/manage/security/authorization",
                     {
                       "type": "category",
                       "label": "Redpanda Console Security",
@@ -391,32 +397,32 @@ module.exports = {
                         {
                           "type": "doc",
                           "label": "Authentication",
-                          "id": "platform/manage/security/authentication"
+                          "id": "platform/manage/security/rp-console/authentication"
                         },
                         {
                           "type": "doc",
                           "label": "Authorization",
-                          "id": "platform/manage/security/authorization"
+                          "id": "platform/manage/security/rp-console/authorization"
                         },
                         {
                           "type": "doc",
                           "label": "GitHub",
-                          "id": "platform/get-started/console/index"
+                          "id": "platform/manage/security/rp-console/github"
                         },
                         {
                           "type": "doc",
                           "label": "Google",
-                          "id": "platform/get-started/console/index"
+                          "id": "platform/manage/security/rp-console/google"
                         },
                         {
                           "type": "doc",
                           "label": "Okta",
-                          "id": "platform/get-started/console/index"
+                          "id": "platform/manage/security/rp-console/okta"
                         },
                         {
                           "type": "doc",
                           "label": "Generic OIDC",
-                          "id": "platform/get-started/console/index"
+                          "id": "platform/manage/security/rp-console/generic-oidc"
                         }
                       ]
                     },
